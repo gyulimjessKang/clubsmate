@@ -1,0 +1,112 @@
+/* Chat.css */
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chat-icon {
+    margin-right: 10px;
+}
+
+.sas-logo {
+    background-color: white;
+    width: 110px;
+    height: 100px;
+    border-radius: 14px;
+    border: 0.5px solid gray;
+}
+
+.chat-window {
+    position: absolute;
+    bottom: 105px;
+    background-color: white;
+    padding: 0;
+    border-radius: 8px;
+    width: 40vw;
+    height: 60vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-header {
+    background-color: #A0192A;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-header-text {
+    color: white;
+    margin-left: 10px;
+    flex: 1;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.chat-header-icon {
+    display: flex;
+    align-items: center;
+}  
+
+.refresh-icon {
+    color: white;
+    margin-top: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.refresh-icon svg {
+    color: white;
+}
+
+.close-icon {
+    color: white;
+    cursor: pointer;
+    margin-right: 3px;
+    font-size: 34px;
+}
+
+.chat-content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-input-form {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0.5px solid gray;
+    margin-right: 5px;
+}
+
+.chat-send-button {
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 0.5px solid gray;
+    background: #A0192A;
+    color: white;
+    cursor: pointer;
+}

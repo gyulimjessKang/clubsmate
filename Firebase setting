@@ -1,0 +1,8 @@
+Prerequisite
+1) homebrew
+
+2) nvm & node 16
+
+Environment setting
+1) Firebase hosting
+npm install -g firebase-tools

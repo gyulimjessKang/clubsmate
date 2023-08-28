@@ -1,0 +1,22 @@
+.login-background{
+    display: flex;
+    background-color: #FAF3E9;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.googleLoginButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Title{
+    font-size: 44px;
+    line-height: 40px;
+    font-family:acumin-pro-extra-condensed,sans-serif;
+     color: #1A2D58;
+     margin-bottom: 20px;
+}

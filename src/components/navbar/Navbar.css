@@ -1,0 +1,81 @@
+.logo {
+    width: 95px;
+    height: auto;
+
+}
+
+.announcementLogo {
+    width: 40px;
+}
+
+.navAlign {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* 중앙 정렬을 원한다면 이 줄도 추가합니다. */
+    height: 80px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    background-color: #FAF3E9;
+}
+
+.club-logo {
+    width: 12.5vw;
+}
+
+.menu-tab {
+    width: 67.5vw;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 50px;
+    text-decoration: none;
+    /* 밑줄 제거 */
+    color: #1D1D1D;
+    /* 현재의 텍스트 색상을 유지 */
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.user-controls {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    /* 아이템들을 수직 중앙에 정렬합니다. 필요에 따라 삭제하셔도 됩니다. */
+    gap: 10px;
+    justify-content: end;
+    /* 아이템들 사이의 간격입니다. 원하는 크기로 조절하실 수 있습니다. */
+}
+
+.nav-link-box {
+    width: 94px;
+    height: 38px;
+    background-color: #1A2D58;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--white, #FFF);
+
+    /* Body */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}

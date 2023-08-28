@@ -1,0 +1,11 @@
+node_modules
+
+#firebase
+.firebaserc
+firebase.json
+/.firebase
+/build
+firestore.rules
+storage.rules
+/src/firebase.js
+

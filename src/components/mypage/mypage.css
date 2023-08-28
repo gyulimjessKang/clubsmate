@@ -1,0 +1,1154 @@
+.container-my-page {
+    margin-top: 80px;
+    padding: 50px 50px 50px 50px;
+    height: 100vh;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.left-info-section {
+    width: 200px;
+    justify-content: space-between;
+}
+
+.profileBox {
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 12px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profileBox img {
+    width: 100%;
+    height: auto;
+}
+
+.quicklinks {
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.quickButton {
+    display: flex;
+    align-items: stretch;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--navy, #1A2D58);
+    background: var(--white, #FFF);
+    padding: 6px 9px;
+    justify-content: space-between;
+    gap: 4px;
+    flex: 1 0 0;
+    margin-bottom: 10px;
+}
+
+.right-icon-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quickText {
+    border-radius: 4px 0px 0px 4px;
+    border: 0px solid var(--navy, #1A2D58);
+    color: var(--navy, #1A2D58);
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: var(--navy, #1A2D58);
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.clubNameTitle {
+    color: var(--dark, #1A2D58);
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.right-info-section {
+    /* min-width: 300px; */
+    width: 1000px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.request-my-authority-section {
+    width: 1100px;
+    padding: 40px;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.welcomeBox {
+    color: var(--dark, #1D1D1D);
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.authTitle {
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 30px;
+}
+
+.select-auth-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.submitButton {
+    width: 120px;
+    height: 33px;
+    background-image: url('/src/styles/caret-right-fill-blue.svg');
+    background-color: white;
+    color: var(--navy, #1A2D58);
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid var(--navy, #1A2D58);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Figtree, sans-serif;
+
+    line-height: 22px;
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.my-club-info-section {
+    width: 1100px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.my-clubs-section {
+    width: 420px;
+    padding: 40px;
+    margin-right: 30px;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.clubTitle {
+    color: var(--dark, #1D1D1D);
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.clubDesc {
+    color: var(--dark, #1D1D1D);
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.clubList {
+    padding-top: 15px;
+}
+
+.eachClub {
+    padding-bottom: 15px;
+}
+
+.adminButton {
+    width: fit-content;
+    padding: 5px 10px;
+    height: 24px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    background-image: url('/src/styles/caret-right-fill-blue.svg');
+    background-color: white;
+    color: var(--navy, #1A2D58);
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid var(--navy, #1A2D58);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Figtree, sans-serif;
+
+    line-height: 24px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.club-events-section {
+    width: 650px;
+    padding: 40px;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: white;
+
+}
+
+.myEventText {
+    color: var(--dark, #1D1D1D);
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.eachEvent {
+    padding-bottom: 30px;
+    justify-content: space-between;
+}
+
+.eventTitle {
+    color: var(--dark, #1D1D1D);
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+}
+
+.myEventText {
+    margin-bottom: 20px;
+}
+
+.eventTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.eventTable th,
+.eventTable td {
+    text-align: left;
+    padding: 8px 12px;
+}
+
+.eventTable thead tr {
+    background-color: #1A2D58;
+    color: white;
+}
+
+.eventTable tbody tr {
+    background-color: white;
+    color: black;
+}
+
+.eventTable tr:first-child th {
+    width: 20%;
+}
+
+.sub-info-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-my-page {
+        margin-top: 80px;
+        padding: 20px 20px 20px 20px;
+        height: 2000px;
+        background-color: #F5F5F5;
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+    }
+    
+    .left-info-section {
+        width: 140px;
+        justify-content: space-between;
+    }
+    
+    .profileBox {
+        margin-bottom: 15px;
+        display: flex;
+        border-radius: 12px;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .profileBox img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .quicklinks {
+        margin-bottom: 15px;
+        border-radius: 12px;
+    }
+    
+    .quickButton {
+        display: flex;
+        align-items: stretch;
+        align-self: stretch;
+        border-radius: 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        background: var(--white, #FFF);
+        padding: 6px 9px;
+        justify-content: space-between;
+        gap: 4px;
+        flex: 1 0 0;
+        margin-bottom: 10px;
+    }
+    
+    .right-icon-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .quickText {
+        border-radius: 4px 0px 0px 4px;
+        border: 0px solid var(--navy, #1A2D58);
+        color: var(--navy, #1A2D58);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .no-underline {
+        text-decoration: none;
+        color: var(--navy, #1A2D58);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .clubNameTitle {
+        color: var(--dark, #1A2D58);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .right-info-section {
+        /* min-width: 300px; */
+        width: 600px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .request-my-authority-section {
+        width: 580px;
+        padding: 30px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+    }
+    
+    .welcomeBox {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .authTitle {
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 30px;
+    }
+    
+    .select-auth-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .select-box-section select {
+        width: 520px;
+    }
+    
+    .submitButton {
+        width: 120px;
+        height: 33px;
+        background-image: url('/src/styles/caret-right-fill-blue.svg');
+        background-color: white;
+        color: var(--navy, #1A2D58);
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Figtree, sans-serif;
+    
+        line-height: 22px;
+    
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+    
+    .my-club-info-section {
+        width: 600px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .my-clubs-section {
+        width: 580px;
+        padding: 40px;
+        margin-right: 30px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+    }
+    
+    .clubTitle {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .clubDesc {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    
+    .clubList {
+        padding-top: 15px;
+    }
+    
+    .eachClub {
+        padding-bottom: 15px;
+    }
+    
+    .adminButton {
+        width: fit-content;
+        padding: 5px 10px;
+        height: 24px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        background-image: url('/src/styles/caret-right-fill-blue.svg');
+        background-color: white;
+        color: var(--navy, #1A2D58);
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Figtree, sans-serif;
+    
+        line-height: 24px;
+    
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .club-events-section {
+        width: 580px;
+        padding: 40px;
+        margin-top: 20px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+        overflow: scroll;
+    }
+    
+    .myEventText {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .eachEvent {
+        padding-bottom: 30px;
+        justify-content: space-between;
+    }
+    
+    .eventTitle {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        padding-right: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .myEventText {
+        margin-bottom: 20px;
+    }
+    
+    .eventTable {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .eventTable th,
+    .eventTable td {
+        text-align: left;
+        padding: 8px 12px;
+    }
+    
+    .eventTable thead tr {
+        background-color: #1A2D58;
+        color: white;
+    }
+    
+    .eventTable tbody tr {
+        background-color: white;
+        color: black;
+    }
+    
+    .eventTable tr:first-child th {
+        width: 20%;
+    }
+    
+    .sub-info-icon {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    .container-my-page {
+        margin-top: 80px;
+        padding: 20px 10px 10px 20px;
+        height: 2000px;
+        background-color: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+    
+    .left-info-section {
+        width: 400px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+    
+    .profileBox {
+        /* width: 140px; */
+        margin-bottom: 15px;
+        display: flex;
+        border-radius: 12px;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .profileBox img {
+        /* width: 100%; */
+        height: auto;
+    }
+    
+    .quicklinks {
+        margin-bottom: 15px;
+        border-radius: 12px;
+    }
+    
+    .quickButton {
+        width: 285px;
+        display: flex;
+        align-items: stretch;
+        align-self: stretch;
+        border-radius: 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        background: var(--white, #FFF);
+        padding: 6px 9px;
+        justify-content: space-between;
+        gap: 4px;
+        flex: 1 0 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .right-icon-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .quickText {
+        border-radius: 4px 0px 0px 4px;
+        border: 0px solid var(--navy, #1A2D58);
+        color: var(--navy, #1A2D58);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .no-underline {
+        text-decoration: none;
+        color: var(--navy, #1A2D58);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .clubNameTitle {
+        color: var(--dark, #1A2D58);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .right-info-section {
+        /* min-width: 300px; */
+        width: 400px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .request-my-authority-section {
+        width: 400px;
+        padding: 25px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+    }
+    
+    .welcomeBox {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .authTitle {
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 30px;
+    }
+    
+    .select-auth-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .select-box-section select {
+        width: 355px;
+    }
+    
+    .submitButton {
+        width: 100px;
+        height: 33px;
+        background-image: url('/src/styles/caret-right-fill-blue.svg');
+        background-color: white;
+        color: var(--navy, #1A2D58);
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Figtree, sans-serif;
+    
+        line-height: 22px;
+    
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+    
+    .my-club-info-section {
+        width: 400px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .my-clubs-section {
+        width: 400px;
+        padding: 25px;
+        margin-right: 30px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+    }
+    
+    .clubTitle {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .clubDesc {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    
+    .clubList {
+        padding-top: 15px;
+    }
+    
+    .eachClub {
+        padding-bottom: 15px;
+    }
+    
+    .adminButton {
+        width: fit-content;
+        padding: 5px 10px;
+        height: 24px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        background-image: url('/src/styles/caret-right-fill-blue.svg');
+        background-color: white;
+        color: var(--navy, #1A2D58);
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Figtree, sans-serif;
+    
+        line-height: 24px;
+    
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .club-events-section {
+        width: 400px;
+        padding: 25px;
+        margin-top: 20px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+        overflow: scroll;
+    }
+    
+    .myEventText {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .eachEvent {
+        padding-bottom: 30px;
+        justify-content: space-between;
+    }
+    
+    .eventTitle {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        padding-right: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .myEventText {
+        margin-bottom: 20px;
+    }
+    
+    .eventTable {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .eventTable th,
+    .eventTable td {
+        text-align: left;
+        padding: 8px 12px;
+    }
+    
+    .eventTable thead tr {
+        background-color: #1A2D58;
+        color: white;
+    }
+    
+    .eventTable tbody tr {
+        background-color: white;
+        color: black;
+    }
+    
+    .eventTable tr:first-child th {
+        width: 20%;
+    }
+    
+    .sub-info-icon {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container-my-page {
+        margin-top: 80px;
+        padding: 20px 10px 20px 10px;
+        height: 2000px;
+        background-color: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+    
+    .left-info-section {
+        width: 355px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+    
+    .profileBox {
+        /* width: 140px; */
+        margin-bottom: 15px;
+        display: flex;
+        border-radius: 12px;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .profileBox img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .quicklinks {
+        margin-bottom: 15px;
+        border-radius: 12px;
+    }
+    
+    .quickButton {
+        width: 250px;
+        display: flex;
+        align-items: stretch;
+        align-self: stretch;
+        border-radius: 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        background: var(--white, #FFF);
+        padding: 6px 9px;
+        justify-content: space-between;
+        gap: 4px;
+        flex: 1 0 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .right-icon-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .quickText {
+        border-radius: 4px 0px 0px 4px;
+        border: 0px solid var(--navy, #1A2D58);
+        color: var(--navy, #1A2D58);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .no-underline {
+        text-decoration: none;
+        color: var(--navy, #1A2D58);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .clubNameTitle {
+        color: var(--dark, #1A2D58);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .right-info-section {
+        /* min-width: 300px; */
+        width: 355px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .request-my-authority-section {
+        width: 355px;
+        padding: 20px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+    }
+    
+    .welcomeBox {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .authTitle {
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 30px;
+    }
+    
+    .select-auth-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .select-box-section select {
+        width: 315px;
+    }
+    
+    .submitButton {
+        width: 100px;
+        height: 33px;
+        background-image: url('/src/styles/caret-right-fill-blue.svg');
+        background-color: white;
+        color: var(--navy, #1A2D58);
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Figtree, sans-serif;
+    
+        line-height: 22px;
+    
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+    
+    .my-club-info-section {
+        width: 355px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .my-clubs-section {
+        width: 355px;
+        padding: 20px;
+        margin-right: 30px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+    }
+    
+    .clubTitle {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .clubDesc {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    
+    .clubList {
+        padding-top: 15px;
+    }
+    
+    .eachClub {
+        padding-bottom: 15px;
+    }
+    
+    .adminButton {
+        width: fit-content;
+        padding: 5px 10px;
+        height: 24px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        background-image: url('/src/styles/caret-right-fill-blue.svg');
+        background-color: white;
+        color: var(--navy, #1A2D58);
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid var(--navy, #1A2D58);
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Figtree, sans-serif;
+    
+        line-height: 24px;
+    
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .club-events-section {
+        width: 355px;
+        padding: 20px;
+        margin-top: 20px;
+        gap: 16px;
+        border-radius: 12px;
+        background-color: white;
+        overflow: scroll;
+    }
+    
+    .myEventText {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .eachEvent {
+        padding-bottom: 30px;
+        justify-content: space-between;
+    }
+    
+    .eventTitle {
+        color: var(--dark, #1D1D1D);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        padding-right: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .myEventText {
+        margin-bottom: 20px;
+    }
+    
+    .eventTable {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .eventTable th,
+    .eventTable td {
+        text-align: left;
+        padding: 8px 12px;
+    }
+    
+    .eventTable thead tr {
+        background-color: #1A2D58;
+        color: white;
+    }
+    
+    .eventTable tbody tr {
+        background-color: white;
+        color: black;
+    }
+    
+    .eventTable tr:first-child th {
+        width: 20%;
+    }
+    
+    .sub-info-icon {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}
