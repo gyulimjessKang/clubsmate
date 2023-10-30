@@ -105,7 +105,7 @@ select {
 }
 
 textarea {
-    width: 300px;
+    width: 80vw;
     height: 80px;
     padding-top: 15px;
     padding-left: 15px;
@@ -119,18 +119,18 @@ textarea {
 }
 
 .input-container.activities textarea {
-    width: 93vw;
+    width: 80vw;
     height: 200px;
 }
 
 .input-container.modal-activities textarea {
-    width: 75vw;
+    width: 80vw;
     height: 200px;
 }
 
 
 .announcement-textarea {
-    width: 93vw;
+    width: 80vw;
     height: 200px;
 
 }
@@ -261,4 +261,8 @@ li {
 
 .modal-cancel-button:hover {
     background-color: #ddd;
+}
+
+.fileUpload{
+    
 }

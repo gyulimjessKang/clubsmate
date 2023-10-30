@@ -97,7 +97,7 @@ const ClubDetail = () => {
           <img
             src={
               clubData.club_logo === "N/A"
-                ? "/clubLogo.png"
+                ? "/img/clubLogo.png"
                 : clubData.club_logo
             }
             alt={`${clubData.club_name} logo`}
@@ -111,6 +111,7 @@ const ClubDetail = () => {
               <img
                 src="/img/caret-right-fill-white.svg"
                 className="arrow-icon"
+                alt="arrow icon"
               />
             </div>
           </div>
@@ -129,6 +130,7 @@ const ClubDetail = () => {
                 <img
                   src="/img/caret-right-fill-blue.svg"
                   className="arrow-icon"
+                  alt ="arrow icom"
                 />
               </div>
             </div>
@@ -147,6 +149,7 @@ const ClubDetail = () => {
               <img
                 src="/img/caret-right-fill-blue.svg"
                 className="arrow-icon"
+                alt = "arrow icon"
               />
             </div>
           </div>

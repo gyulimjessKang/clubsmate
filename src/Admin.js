@@ -3,12 +3,17 @@ import { AuthContext } from "./AuthProvider";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-// import Modal from "./Modal";
+import "firebase/storage";
 import ReactModal from "react-modal";
-import "./styles/AdminPage.css";
+import "./styles/admin.css";
 import { FaSyncAlt } from "react-icons/fa";
+import { storage } from './firebase';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-const AdminPage = () => {
+
+
+const Admin = () => {
   const db = firebase.firestore();
 
   const { currentUser } = useContext(AuthContext);
@@ -31,7 +36,13 @@ const AdminPage = () => {
   const [requests, setRequests] = useState([]);
   const [isRequestApproved, setIsRequestApproved] = useState(false);
   const [approvedRequests, setApprovedRequests] = useState([]);
+  
+  // add to calendar
 
+  const [startDate, setStartDate] = useState(new Date());
+
+
+  
   const [newClubInfo, setNewClubInfo] = useState({
     club_name: "",
     category: "",
@@ -608,17 +619,7 @@ const AdminPage = () => {
     fetchRequests();
   };
 
-  const handleLogout = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        console.log("User signed out successfully.");
-      })
-      .catch((error) => {
-        console.error("Error signing out: ", error);
-      });
-  };
+ 
 
   // 인풋 박스의 스타일 동적으로 설정
   const setInputWidth = () => {
@@ -628,77 +629,75 @@ const AdminPage = () => {
     }
   };
 
-  const handleCreateRequest = async () => {
-    try {
-      const emailHandle = "maillard.lee"; // 여기에 로그인한 사용자의 이메일에서 '@'을 기준으로 앞에 있는 문자열(email handle)을 가져오는 코드를 추가해야 함.
-      const clubName = "Bio Lab"; // 여기에 권한 신청하려는 클럽 이름을 저장
-      const requestData = {
-        confirm_flag: false,
-        confirmed_timestamp: null,
-        current_role: "0",
-        request_club_leader: "Vice President",
-        request_role: "1",
-        request_timestamp: new Date().toString(),
-      };
+  const [image, setImage] = useState(null);
 
-      // RequestAuthority 컬렉션 안의 해당 사용자의 문서에 RequestInfo 컬렉션을 추가
-      const userRequestDocRef = firebase
-        .firestore()
-        .collection("RequestAuthority")
-        .doc(emailHandle);
-      const requestInfoDocRef = userRequestDocRef
-        .collection("RequestInfo")
-        .doc(clubName);
-
-      // 먼저 문서를 읽어옴
-      const userRequestDoc = await userRequestDocRef.get();
-      const requestInfoDoc = await requestInfoDocRef.get();
-
-      await firebase.firestore().runTransaction(async (transaction) => {
-        if (!userRequestDoc.exists) {
-          transaction.set(userRequestDocRef, {});
-        }
-        if (!requestInfoDoc.exists) {
-          transaction.set(requestInfoDocRef, requestData);
-        }
-      });
-
-      // Users 컬렉션에서 해당 emailHandle을 문서ID로 하는 문서를 가져오기
-      const userDocRef = firebase
-        .firestore()
-        .collection("Users")
-        .doc(emailHandle);
-      const userDocSnapshot = await userDocRef.get();
-
-      // 해당 문서가 존재하지 않으면 Users 컬렉션과 JoinClub 컬렉션에 문서를 생성
-      if (!userDocSnapshot.exists) {
-        await userDocRef.set({});
-        await userDocRef.collection("JoinClub").doc(clubName).set({
-          club_leader: "",
-          user_role: "0",
-        });
-      } else {
-        // JoinClub 컬렉션 안에서 해당 clubName을 문서 ID로 하는 문서를 가져오기
-        const clubDocRef = userDocRef.collection("JoinClub").doc(clubName);
-        const clubDocSnapshot = await clubDocRef.get();
-
-        // 해당 문서가 존재하지 않으면 JoinClub 컬렉션에 문서를 생성
-        if (!clubDocSnapshot.exists) {
-          await clubDocRef.set({
-            club_leader: "",
-            user_role: "0",
-          });
-        }
-      }
-
-      console.log(">>> Document insertion completed");
-    } catch (error) {
-      console.error("*** Request error raised", error);
-    }
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
   };
+
+  const handleUpload = () => {
+    const uploadTask = storage.ref(`clubLogos/${selectedClub}/${image.name}`).put(image);
+
+    uploadTask.on(
+      "state_changed",
+      snapshot => {
+        // progress function
+      },
+      error => {
+        // Error function
+        console.log(error);
+      },
+      () => {
+        // complete function
+        storage
+          .ref(`clubLogos/${selectedClub}`)
+          .child(image.name)
+          .getDownloadURL()
+          .then(url => {
+            console.log("download URL is : ",url);
+            console.log("selected CLUB", selectedClub);
+
+            // Firestore에 URL을 저장
+          saveImageLinkToFirestore(selectedClub, url);
+
+          // Upload가 완료되면 alert를 띄웁니다.
+          alert("Upload is complete");
+
+          });
+      }
+    );
+  };
+  const saveImageLinkToFirestore = (clubId, url) => {
+  
+    db.collection("ClubInfo").doc(clubId).set({
+      club_logo: url,
+    }, { merge: true })
+    .then(() => {
+      console.log("Image URL has been written to Firestore");
+    })
+    .catch((error) => {
+      console.error("Error writing Image URL to Firestore: ", error);
+    });
+  };
+
+
+
+  const [showDatePicker, setShowDatePicker] = useState(false);
+
+  const handleDateChange = (date) => {
+      setClubInfo(prevState => ({
+          ...prevState,
+          meeting_time: date
+      }));
+      setShowDatePicker(false);  // 날짜 선택 후 DatePicker 숨기기
+  };
+
 
   return (
     <div className="admin-page">
+
+
       <div className="admin-header">
         <h1>SAS Club Manager Admin Page</h1>
         <div className="user-info">
@@ -716,15 +715,16 @@ const AdminPage = () => {
       </div>
 
       <div className="club-info-section">
+      
         <h2 className="club-info-header">
           {selectedClub ? `1. Club Info: ${selectedClub}` : "Club Info"}
         </h2>
-        <button
+        {isSuperUser && (<button
           className="create-button"
           onClick={() => setClubModalOpen(true)}
         >
           Create Club
-        </button>
+        </button>)}
         <ReactModal
           className="modal-content"
           isOpen={isClubModalOpen}
@@ -761,6 +761,11 @@ const AdminPage = () => {
                         <label>{option}</label>
                       </div>
                     ))
+                  ) : key === "club_logo" ? (
+                    <div>
+                      <input type="file" onChange={handleChange} />
+                      <button onClick={handleUpload}>Upload</button>
+                    </div>
                   ) : (
                     <textarea
                       className="input-textarea"
@@ -832,12 +837,18 @@ const AdminPage = () => {
                     <label>{option}</label>
                   </div>
                 ))
-              ) : (
+              ): key === "club_logo" ? (
+                <div className="fileUpload">
+                  <input type="file" onChange={handleChange} />
+                  <button onClick={handleUpload}>Upload</button>
+                </div>
+              ) :(
                 <textarea
                   name={key}
                   value={clubInfo[key] || ""}
                   onChange={handleInputChange}
                   onFocus={setInputWidth}
+                  readOnly={key === "category"}
                 />
               )}
             </div>
@@ -1196,16 +1207,9 @@ const AdminPage = () => {
             </p>
           )}
         </div>
-
-        {/* 기타 화면 컨텐츠 */}
-        {/* <p>
-          <button className="update-button" onClick={handleCreateRequest}>
-            User Authority Request
-          </button>
-        </p> */}
       </div>
     </div>
   );
 };
 
-export default AdminPage;
+export default Admin;

@@ -1,0 +1,15 @@
+.background{
+    display: flex;
+    background-color: #1A2D58;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    height: 80px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: Figtree, sans-serif;
+    padding-top: 10px;
+
+}

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { IoIosClose } from "react-icons/io";
-import ChatIcon from "./ChatIcon";
-// import SASIcon from "../public/img/SAS_logo.png"
 import ChatBubble from "./ChatBubble";
 import { firebase } from "./firebase";
 import "firebase/auth";
@@ -151,13 +149,14 @@ const Chat = () => {
         <div className="chat-container">
           <div className="chat-wrapper">
             <ChatBubble />
-            <img className="sas-logo" src="/img/chatEagleLogo.png" onClick={toggleChat} />
+            <img className="sas-logo" src="/img/chatEagleLogo.png" onClick={toggleChat} alt ="eagle logo" />
 
             {showChat && (
               <div className="chat-window">
                 <div className="chat-header">
                   <div className="chat-header-text">
-                    🗣️ Welcome to CLUBSMATE! 🗣️
+                   Welcome to CLUBSMATE! <span role="img" aria-label="talk emoji  ">
+                  💬</span>
                   </div>
                   <div className="chat-header-icon">
                     <div className="refresh-icon" onClick={handleRefreshChat}>

@@ -80,9 +80,7 @@ const EventDetail = () => {
       : "None";
   const applyLink =
     clubEvents && clubEvents.length > 0 ? clubEvents[0].apply_link : "";
-  const inquiryLink =
-    clubEvents && clubEvents.length > 0 ? clubEvents[0].contact_link : "";
-
+  
   const handleApplyNowClick = () => {
     if (applyLink !== "") {
       const absoluteURL = new URL(applyLink, window.location.origin);
@@ -117,6 +115,7 @@ const EventDetail = () => {
                   <img
                     src="/img/caret-right-fill-white.svg"
                     className="arrow-icon"
+                    alt ="arrow icon"
                   />
                 </div>
               </div>
@@ -127,6 +126,7 @@ const EventDetail = () => {
                 <img
                   src="/img/caret-right-fill-blue.svg"
                   className="arrow-icon"
+                  alt ="arrow icon"
                 />
               </div>
             </div>
@@ -148,9 +148,9 @@ const EventDetail = () => {
           </div>
           <div className="event-right-headline-section">{event_name}</div>
           <div className="event-right-sub-info-section">
-            <img src="/img/Icon_date.svg" className="sub-info-icon" />
+            <img src="/img/Icon_date.svg" className="sub-info-icon" alt ="date icon" />
             <div className="sub-info-datetime-text">{startDate}</div>
-            <img src="/img/locationIcon.svg" className="sub-info-icon" />
+            <img src="/img/locationIcon.svg" className="sub-info-icon" alt ="location icon" />
             <div className="sub-info-location-text">{location}</div>
           </div>
           <div className="event-right-description-text-section">

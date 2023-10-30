@@ -1,12 +1,12 @@
-// LoginPage.js
+// Login.js
 import React, { useState, useContext } from "react";
 import { firebase, auth } from "./firebase";
 import './styles/GoogleSignInButton.css';
-import './styles/Login.css'
+import './styles/login.css'
 import { useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
-const LoginPage = () => {
+const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { isAdmin, setIsAdmin } = useContext(AuthContext);
@@ -31,7 +31,7 @@ const LoginPage = () => {
   const signInWithGoogle = async () => {
     try {
       const result = await auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-      console.log(result.user);
+      //console.log(result.user);
 
       const email = result.user.email;
       const email_handle = email.substring(0, email.lastIndexOf("@"));
@@ -65,7 +65,6 @@ const LoginPage = () => {
 
   return (
     <div className=" login-background">
-    {/* <div><img src="/img/saslogo.png" /></div> */}
     <div className="Title">
       Welcome to SAS General Club Portal - CLUBSMATE!
     </div>
@@ -83,4 +82,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

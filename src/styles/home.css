@@ -14,26 +14,6 @@
     gap: 40px;
 }
 
-/* 무한으로 움직이는 애니메이션을 정의 */
-/* @keyframes moveLeft {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.container-announcement {
-    position: relative;
-    overflow: hidden;
-}
-
-.announcement-data {
-    animation: moveLeft 10s linear infinite;
-    white-space: nowrap;
-} */
 
 .announcement{
     text-decoration: none;
@@ -109,7 +89,7 @@
     background-color: white;
     padding-left: 40px;
     /* 아이콘 영역을 위한 여백 */
-    background-image: url('./searchIcon.svg');
+    background-image: url('/public/img/searchIcon.svg');
     /* 아이콘 경로를 정확하게 입력해주세요 */
     background-position: 10px center;
     /* 아이콘 위치 조정 */
@@ -144,7 +124,7 @@
     /* 크롬, 사파리에서의 브라우저 기본 스타일 제거 */
     padding-left: 40px;
     /* 아이콘 영역을 위한 여백 */
-    background-image: url('./locationIcon.svg'), url('./selector.svg');
+    background-image: url('/public/img/locationIcon.svg'), url('/public/img/selector.svg');
     background-position: 10px center, right 10px center;
     background-repeat: no-repeat, no-repeat;
     color: #a9a9a9;
@@ -157,6 +137,7 @@
 
 .container-club-card {
     background-color: #E5E5E5;
+    padding-bottom: 80px;
     padding-left: 35px;
     padding-right: 35px;
     display: grid;
@@ -171,6 +152,7 @@
     border-radius: 10px;
     padding: 20px;
     width: 310px;
+    height: 240px;
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;

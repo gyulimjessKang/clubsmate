@@ -1,0 +1,11 @@
+.container-home {
+    padding-top: 80px;
+    overflow: auto;
+}
+
+.header_test{
+    background-color: pink;
+    font: normal 400 10px/22px 'Figtree', sans-serif;
+    color: white;
+    text-align: center;
+}

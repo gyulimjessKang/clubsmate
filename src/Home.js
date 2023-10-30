@@ -5,7 +5,7 @@ import 'firebase/firestore';
 import Chat from "./Chat.js";
 import './styles/home.css';
 
-const HomePage = () => {
+const Home = () => {
   const [clubDataList, setClubDataList] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredClubData, setFilteredClubData] = useState([]);
@@ -26,7 +26,6 @@ const HomePage = () => {
         const data = querySnapshot.docs.map((doc) => doc.data());
         setClubDataList(data);
         setFilteredClubData(data); // 최초에 모든 동아리 데이터를 보여줍니다.
-        console.log(data);
       })
       .catch((error) => {
         console.log('Error getting documents:', error);
@@ -37,11 +36,11 @@ const HomePage = () => {
         // 문서가 존재할 경우 문서 데이터를 가져와서 categories 상태 업데이트
         setCategories(Object.keys(categorydoc.data()));
       } else {
-        console.log("해당 문서를 찾을 수 없습니다.");
+        console.log("Can't find the document.");
       }
     })
       .catch((error) => {
-        console.log("데이터를 가져오는 중 오류가 발생했습니다.", error);
+        console.log("Data fetch error.", error);
       });
   }, []);
 
@@ -104,6 +103,7 @@ const HomePage = () => {
       });
   }, []);
 
+  //문자열 길이 줄이는 함수. 최대 길이는 maxLength로 설정한다.
   function truncateString(str) {
     const maxLength = 100;
   
@@ -145,13 +145,7 @@ const HomePage = () => {
         ))}
       </div>
       )}
-      {/* <div
-            className="announcement-data"
-            key={index}
-            // 애니메이션 시작 지연: 여기서는 항목 수만큼의 지연을 주었습니다.
-            // (전체 애니메이션 지속 시간 / 항목의 수) x 현재 항목의 인덱스
-            style={{ animationDelay: `${10 * index}s` }} 
-            ></div> */}
+      
       <div className="container-headline">
         <div className="headline-title">
           SINGAPORE AMERICAN SCHOOL GENERAL CLUBS
@@ -201,16 +195,17 @@ const HomePage = () => {
           </div>
         ))}
       </div>
-            {((club.club_logo)!="N/A") && (
+            {/* {((club.club_logo)!="N/A") && (
               <img
                 src={club.club_logo}
                 alt={`${club.club_name} logo`}
                 className="clubLogo"
               />
-            )}
+            )} */}
             <div className="clubcard-club-name">{club.club_name}</div>
-            <p className="clubcard-club-description-category">{club.category}</p> {/* 클럽 설명 */}
-            <p className="clubcard-club-description">{club.meeting_date}</p> {/* 클럽 설명 */}
+            <p className="clubcard-club-description-category">{club.category}</p> {/* 클럽 카테고리 */}
+            <p className="clubcard-club-description">{club.meeting_date}</p> {/* 클럽 스케쥴 */}
+            
             <Link
               to={`/clubDetail/${club.club_name}`}
               className="clubDetailLink"
@@ -226,4 +221,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;

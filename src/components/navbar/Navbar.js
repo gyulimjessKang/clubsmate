@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider";
-import Logout from "../logout/Logout";
 import firebase from "firebase/app";
 import "./Navbar.css";
 
@@ -24,7 +23,7 @@ function Navbar() {
       <nav className="fixed-top pt-0">
         <div className="navAlign">
           <a href="/" role="button">
-            <img className="logo" src="/eagleLogo.svg" alt="clubsmate logo" />
+            <img className="logo" src="/img/eagleLogo.svg" alt="clubsmate logo" />
           </a>
           <div className="menu-tab">
             <div className="menu-items">

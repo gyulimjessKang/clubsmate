@@ -16,7 +16,6 @@ const MyPage = () => {
   const [clubs, setClubs] = useState([]);
 
   const userDocRef = firebase.firestore().collection("Users").doc(emailHandle);
-  //const userDocSnapshot = userDocRef.get();
 
   const handleClubChange = (e) => {
     setSelectedClub(e.target.value);
@@ -191,6 +190,7 @@ const MyPage = () => {
               <img
                 src="/img/caret-right-fill-blue.svg"
                 className="arrow-icon"
+                alt ="arrow icon"
               />
             </div>
           </div>
@@ -211,6 +211,7 @@ const MyPage = () => {
               <img
                 src="/img/caret-right-fill-blue.svg"
                 className="arrow-icon"
+                alt ="arrow icon"
               />
             </div>
           </div>
@@ -299,7 +300,6 @@ const MyPage = () => {
                         Details
                       </Link>
                     </div>
-                    {/* <Link to={`/clubDetail/${club.club_name}`}><Button>detail</Button></Link> */}
                   </div>
                 ))}
               </div>
@@ -328,6 +328,7 @@ const MyPage = () => {
                         <img
                           src="/img/Icon_date.svg"
                           className="sub-info-icon"
+                          alt ="arrow icon"
                         />
                         {event.end_date}
                       </td>
@@ -335,6 +336,7 @@ const MyPage = () => {
                         <img
                           src="/img/locationIcon.svg"
                           className="sub-info-icon"
+                          alt ="arrow icon"
                         />
                         {event.location}
                       </td>

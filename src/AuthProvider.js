@@ -1,7 +1,6 @@
 import React, { useEffect, useState, createContext } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-//import { firebase, auth } from "./firebase";
 
 export const AuthContext = createContext();
 
@@ -42,11 +41,7 @@ export const AuthProvider = ({ children }) => {
       }
     });
   }, [db]);
-  const signOut = () => {
-    firebase.auth().signOut().then(() => {
-      setCurrentUser(null); // Reset currentUser to null on sign out
-    });
-  };
+
 
   if(loading){
 	  return null;

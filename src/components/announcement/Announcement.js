@@ -71,11 +71,11 @@ const Announcement = () => {
           {announcement.announcement_name}
         </div>
         <div className="announcement-sub-info-section">
-          <img src="/img/Icon_date.svg" className="sub-info-icon" />
+          <img src="/img/Icon_date.svg" className="sub-info-icon" alt ="date icon" />
           <div className="sub-info-datetime-text">
             {announcement.start_date}
           </div>
-          <img src="/img/locationIcon.svg" className="sub-info-icon" />
+          <img src="/img/locationIcon.svg" className="sub-info-icon" alt ="location icon"/>
           <div className="sub-info-location-text">
             {announcement.location}
           </div>
