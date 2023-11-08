@@ -14,6 +14,7 @@ import MyPage from './components/mypage/MyPage';
 import Announcement from './components/announcement/Announcement';
 import Footer from './components/footer/Footer';
 import Cal from './Cal';
+import Feedback from './Feedback';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <Route path="/mypage" element={<PrivateRoute><MyPage /></PrivateRoute>} />
           <Route path="/announcement" element={<PrivateRoute><Announcement /></PrivateRoute>} />
           <Route path="/cal" element={<PrivateRoute><Cal /></PrivateRoute>} />
+          <Route path="/feedback" element={<PrivateRoute><Feedback /></PrivateRoute>} />
+
           <Route path="/footer" element={<Footer />} />
           
          </Routes>

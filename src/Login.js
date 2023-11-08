@@ -2,7 +2,7 @@
 import React, { useState, useContext } from "react";
 import { firebase, auth } from "./firebase";
 import './styles/GoogleSignInButton.css';
-import './styles/login.css'
+import './styles/Login.css'
 import { useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
