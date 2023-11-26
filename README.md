@@ -36,7 +36,7 @@ i. Manual Administrative Processes: Teachers responsible for overseeing clubs wi
 ![ERD](https://github.com/gyulimjessKang/clubsmate/blob/master/ERD_final.drawio.png)
 
 ## Firebase structure
-![Clubsmate structure](https://github.com/jessxkang/clubsmate/blob/main/images/Clubsmate_Firebase.svg)
+![Clubsmate structure](https://github.com/gyulimjessKang/clubsmate/blob/master/Clubsmate_Firebase.svg)
 
 ## Firestore
 [clubsmate nosql database model](https://docs.google.com/spreadsheets/d/12Qvgs-iuxbtcDP39zFRjNjxpulE5hEewPz8BP25pal8/edit?usp=share_link)
