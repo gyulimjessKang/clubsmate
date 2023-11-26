@@ -1,4 +1,26 @@
-# Clubmates
+# Clubsmate 🎉
+
+## What is Clubsmate?
+
+### Goal
+```Let's create an up-to-date, intuitive platform for students to discover and actively engage with existing clubs that resonate with their interests and aspirations!```
+### Key Functions 💎
+1. Club recommendations based on user's interests via AI chatbot
+2. Allow officers to manage club page; information, schedule, members
+3. Search database of existing clubs.
+
+
+### Development duration
+07/05/23 ~ 08/05/23
+
+### Launched Date
+Aug. 7th. 2023
+
+
+### 👇 Check my Clubsmate development journey on Youtube 👇
+[links](http://youtube.com)
+
+# Service Design
 ## :pencil2: Problem Statement
 Problems Faced by Students, Club Initiators, and Teachers:
 1) Students Creating Clubs
@@ -11,6 +33,35 @@ i. Manual Administrative Processes: Teachers responsible for overseeing clubs wi
 
 
 ## ERD
-![ERD](https://github.com/gyulimjessKang/clubmanager/blob/main/images/ERD_final.drawio.png)
+![ERD](https://github.com/jessxkang/clubsmate/blob/main/images/ERD_final.drawio.png)
 
-### prerequisites
+## Firebase structure
+![Clubsmate structure](https://github.com/jessxkang/clubsmate/blob/main/images/Clubsmate_Firebase.svg)
+
+## Firestore
+[clubsmate nosql database model](https://docs.google.com/spreadsheets/d/12Qvgs-iuxbtcDP39zFRjNjxpulE5hEewPz8BP25pal8/edit?usp=share_link)
+
+
+
+# Getting started 🚀
+## Environment
+* firebase 8
+* node v16.20.1
+* react 18
+
+
+Clone the project on your computer and see how it works
+
+```
+  git clone  https://github.com/jessxkang/clubsmate
+  cd clubsmate
+```
+
+After that, to run project, run this commands:
+
+
+##### npm
+```
+  npm install
+  npm start
+```
