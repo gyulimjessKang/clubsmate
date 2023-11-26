@@ -1,5 +1,6 @@
+
 .logo {
-    width: 95px;
+    width: 60px;
     height: auto;
 
 }
@@ -27,23 +28,39 @@
 }
 
 .menu-tab {
-    width: 67.5vw;
-    margin-left: 40px;
+    width: 60vw;
+    margin-left: 20px;
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.menu-tab > .nav-item {
+    flex-grow: 1; /* 가용 공간을 균등하게 차지하도록 설정 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+    display: flex; /* flexbox 모델 사용 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
 }
 
 .menu-items {
     display: flex;
-    align-items: center;
+    flex-grow: 1; /* 가용 공간을 균등하게 차지하도록 설정 */
+    text-align: center;
+
+}
+.menu-items svg {
+    width: 20px;  /* 원하는 너비로 설정 */
+    height: 20px; /* 원하는 높이로 설정 */
+    
 }
 
 .nav-item {
-    margin-right: 50px;
+    margin-right: 10px;
     text-decoration: none;
-    /* 밑줄 제거 */
-    color: #1D1D1D;
     /* 현재의 텍스트 색상을 유지 */
+    color: var(--dark, #1A2D58);
+    flex-grow: 1;
 }
 
 .nav-item:last-child {
@@ -51,13 +68,18 @@
 }
 
 .user-controls {
-    width: 20vw;
+    width: 25vw;
     display: flex;
     align-items: center;
     /* 아이템들을 수직 중앙에 정렬합니다. 필요에 따라 삭제하셔도 됩니다. */
-    gap: 10px;
+    gap: 15px;
     justify-content: end;
     /* 아이템들 사이의 간격입니다. 원하는 크기로 조절하실 수 있습니다. */
+}
+.user-controls svg {
+    width: 20px;  /* 원하는 너비로 설정 */
+    height: 20px; /* 원하는 높이로 설정 */
+    align-items: center;
 }
 
 .nav-link-box {
@@ -74,8 +96,179 @@
     color: var(--white, #FFF);
 
     /* Body */
-    font-size: 16px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+
+
+
+
+
+@media (min-width: 768px){
+
+
+
+.logo {
+    width: 70px;
+    height: auto;
+
+}
+
+.announcementLogo {
+    width: 40px;
+}
+
+.navAlign {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    background-color: #FAF3E9;
+}
+
+.club-logo {
+    width: 12.5vw;
+}
+
+.menu-tab {
+    width: 60vw;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #1D1D1D;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.user-controls {
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: end;
+}
+
+.nav-link-box {
+    width: 70px;
+    height: 35px;
+    background-color: #1A2D58;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--white, #FFF);
+
+    /* Body */
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
 }
+}
+
+
+
+@media (min-width: 1400px){
+
+
+
+    .logo {
+        width: 95px;
+        height: auto;
+    
+    }
+    
+    .announcementLogo {
+        width: 40px;
+    }
+    
+    .navAlign {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        padding-top: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+        background-color: #FAF3E9;
+    }
+    
+    .club-logo {
+        width: 12.5vw;
+    }
+    
+    .menu-tab {
+        width: 60vw;
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .menu-items {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #1D1D1D;
+    }
+    
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+    
+    .user-controls {
+        width: 25vw;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: end;
+    }
+    
+    .nav-link-box {
+        width: 100px;
+        height: 35px;
+        background-color: #1A2D58;
+        border-radius: 4px;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: var(--white, #FFF);
+    
+        /* Body */
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    }
