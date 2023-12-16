@@ -1,6 +1,6 @@
-.container-home {
+.container-newhome {
     padding-top: 80px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .container-announcement {
@@ -11,7 +11,6 @@
     background-color: #1A2D58;
     color: aliceblue;
     display: flex;
-    gap: 40px;
 }
 
 
@@ -22,25 +21,26 @@
 
 }
 .announcement-name {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.announcement-description {
     font-size: 16px;
     font-weight: 400;
 }
 
+.announcement-description {
+    font-size: 12px;
+    font-weight: 400;
+    
+}
+
 .container-headline {
-    height: 280px;
-    padding-top: 108px;
-    padding-bottom: 108px;
-    padding-left: 72px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 25px;
 }
 
 .headline-title {
     width: 100%;
-    font-size: 48px;
+    font-size: 32px;
     font-style: normal;
     font-weight: bold;
     line-height: 48px;
@@ -52,7 +52,8 @@
 }
 
 .headline-content {
-    width: 100%;
+    width: 90%;
+    padding-top: 10px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -64,8 +65,8 @@
     background-color: #E5E5E5;
     padding-top: 40px;
     padding-bottom: 21px;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
 }
 
@@ -83,11 +84,11 @@
 }
 
 .container-search-and-select-box input[type="text"] {
-    width: 50%;
+    width: 60%;
     height: 55px;
     border: none;
     background-color: white;
-    padding-left: 40px;
+    padding-left: 10px;
     /* 아이콘 영역을 위한 여백 */
     background-image: url('/public/img/searchIcon.svg');
     /* 아이콘 경로를 정확하게 입력해주세요 */
@@ -113,7 +114,7 @@
 }
 
 .container-search-and-select-box select {
-    width: 750px;
+    width: 50%;
     height: 55px;
     border: none;
     border-radius: 0;
@@ -122,7 +123,7 @@
     /* 브라우저 기본 스타일 제거 */
     -webkit-appearance: none;
     /* 크롬, 사파리에서의 브라우저 기본 스타일 제거 */
-    padding-left: 40px;
+    padding-left: 20px;
     /* 아이콘 영역을 위한 여백 */
     background-image: url('/public/img/locationIcon.svg'), url('/public/img/selector.svg');
     background-position: 10px center, right 10px center;
@@ -243,4 +244,754 @@ font-style: normal;
 font-weight: 400;
 line-height: 22px; /* 137.5% */
 opacity: 0.4;
+}
+
+@media (min-width: 428px) {
+    /* 크롬에서 화면 가로 사이즈를 428로 설정하고 폰트 바꾼거 사이즈 바꾼거 확인할 수 있어 */
+    .container-newhome {
+        padding-top: 80px;
+        overflow: hidden;
+    }
+    
+    .container-announcement {
+        height: 120px;
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: #1A2D58;
+        color: aliceblue;
+        display: flex;
+    }
+    
+    
+    .announcement{
+        text-decoration: none;
+        color: aliceblue;
+        font-family: Figtree;
+    
+    }
+    .announcement-name {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .announcement-description {
+        font-size: 14px;
+        font-weight: 400;
+        
+    }
+    
+    .container-headline {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 25px;
+    }
+    
+    .headline-title {
+        width: 100%;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 48px;
+        /* 100% */
+        letter-spacing: 1.44px;
+        font-family:acumin-pro-extra-condensed,sans-serif;
+         color: #1A2D58;
+        
+    }
+    
+    .headline-content {
+        width: 90%;
+        padding-top: 10px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .container-search-and-select-box {
+        height: 130px;
+        background-color: #E5E5E5;
+        padding-top: 40px;
+        padding-bottom: 21px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    
+    .search-and-select-box {
+        width: 100%;
+        height: 55px;
+        background-color: white;
+        display: flex;
+        /* flexbox로 설정 */
+        align-items: center;
+        /* 수직 중앙 정렬 */
+        justify-content: start;
+        /* 수평 시작점에서 요소들을 정렬 (선택사항) */
+    
+    }
+    
+    .container-search-and-select-box input[type="text"] {
+        width: 50%;
+        height: 55px;
+        border: none;
+        background-color: white;
+        padding-left: 15px;
+        /* 아이콘 영역을 위한 여백 */
+        background-image: url('/public/img/searchIcon.svg');
+        /* 아이콘 경로를 정확하게 입력해주세요 */
+        background-position: 10px center;
+        /* 아이콘 위치 조정 */
+        background-repeat: no-repeat;
+    }
+    
+    .container-search-and-select-box input[type="text"]::placeholder {
+        width: 50%;
+        color: #a9a9a9;
+        /* placeholder 색상 */
+    }
+    
+    .separator {
+        height: 25px;
+        width: 1px;
+        /* 선의 너비. 필요에 따라 조절 가능 */
+        background-color: #a9a9a9;
+        /* 선의 색상. 원하는 색상으로 변경 */
+        vertical-align: middle;
+        /* 수직 중앙 정렬 */
+    }
+    
+    .container-search-and-select-box select {
+        width: 50%;
+        height: 55px;
+        border: none;
+        border-radius: 0;
+        background-color: white;
+        appearance: none;
+        /* 브라우저 기본 스타일 제거 */
+        -webkit-appearance: none;
+        /* 크롬, 사파리에서의 브라우저 기본 스타일 제거 */
+        padding-left: 20px;
+        /* 아이콘 영역을 위한 여백 */
+        background-image: url('/public/img/locationIcon.svg'), url('/public/img/selector.svg');
+        background-position: 10px center, right 10px center;
+        background-repeat: no-repeat, no-repeat;
+        color: #a9a9a9;
+    }
+    
+    /* select 박스 확장 화살표 제거 (크롬, IE 등 대부분의 브라우저) */
+    .container-search-and-select-box select::-ms-expand {
+        display: none;
+    }
+    
+    .container-club-card {
+        background-color: #E5E5E5;
+        padding-bottom: 80px;
+        padding-left: 35px;
+        padding-right: 35px;
+        display: grid;
+        place-items: center; 
+        row-gap: 10px; 
+        column-gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
+    .clubCard {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 310px;
+        height: 240px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: white;
+    
+    }
+    
+    .clubCard .clubLogo {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 10px 0;
+        /* 가운데 정렬 */
+    }
+    
+    .clubCard h2 {
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: cumin-pro-extra-condensed,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    }
+    
+    .clubCard .clubDetailLink {
+        text-align: center;
+        background-color: white;
+        padding: 5px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: auto;
+        border: 1px solid black; /* 이 부분을 추가합니다 */
+    }
+    
+    .featured-clubs .clubDetailLink {
+        text-align: center;
+        background-color: white;
+        padding: 5px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: auto;
+        border: 1px solid black; /* 이 부분을 추가합니다 */
+    }
+    
+    .tagBox {
+        height: 23px;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    
+    .clubcard-club-name {
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 22px; /* 137.5% */
+    }
+    
+    .clubcard-club-description-category{
+        color: var(--dark, #1A2D58);
+    /* Body */
+    font-family: acumin-pro-extra-condensed,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    }
+    .clubcard-club-description{
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: acumin-pro-extra-condensed,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    opacity: 0.4;
+    }
+}
+@media (min-width: 768px) {
+    /* 크롬에서 화면 가로 사이즈를 428로 설정하고 폰트 바꾼거 사이즈 바꾼거 확인할 수 있어 */
+    .container-newhome {
+        padding-top: 80px;
+        overflow: hidden;
+    }
+    
+    .container-announcement {
+        height: 120px;
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: #1A2D58;
+        color: aliceblue;
+        display: flex;
+    }
+    
+    
+    .announcement{
+        text-decoration: none;
+        color: aliceblue;
+        font-family: Figtree;
+    
+    }
+    .announcement-name {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .announcement-description {
+        font-size: 14px;
+        font-weight: 400;
+        
+    }
+    
+    .container-headline {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 25px;
+    }
+    
+    .headline-title {
+        width: 100%;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 48px;
+        /* 100% */
+        letter-spacing: 1.44px;
+        font-family:acumin-pro-extra-condensed,sans-serif;
+         color: #1A2D58;
+        
+    }
+    
+    .headline-content {
+        width: 90%;
+        padding-top: 10px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .container-search-and-select-box {
+        height: 130px;
+        background-color: #E5E5E5;
+        padding-top: 40px;
+        padding-bottom: 21px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    
+    .search-and-select-box {
+        width: 100%;
+        height: 55px;
+        background-color: white;
+        display: flex;
+        /* flexbox로 설정 */
+        align-items: center;
+        /* 수직 중앙 정렬 */
+        justify-content: start;
+        /* 수평 시작점에서 요소들을 정렬 (선택사항) */
+    
+    }
+    
+    .container-search-and-select-box input[type="text"] {
+        width: 50%;
+        height: 55px;
+        border: none;
+        background-color: white;
+        padding-left: 15px;
+        /* 아이콘 영역을 위한 여백 */
+        background-image: url('/public/img/searchIcon.svg');
+        /* 아이콘 경로를 정확하게 입력해주세요 */
+        background-position: 10px center;
+        /* 아이콘 위치 조정 */
+        background-repeat: no-repeat;
+    }
+    
+    .container-search-and-select-box input[type="text"]::placeholder {
+        width: 50%;
+        color: #a9a9a9;
+        /* placeholder 색상 */
+    }
+    
+    .separator {
+        height: 25px;
+        width: 1px;
+        /* 선의 너비. 필요에 따라 조절 가능 */
+        background-color: #a9a9a9;
+        /* 선의 색상. 원하는 색상으로 변경 */
+        vertical-align: middle;
+        /* 수직 중앙 정렬 */
+    }
+    
+    .container-search-and-select-box select {
+        width: 50%;
+        height: 55px;
+        border: none;
+        border-radius: 0;
+        background-color: white;
+        appearance: none;
+        /* 브라우저 기본 스타일 제거 */
+        -webkit-appearance: none;
+        /* 크롬, 사파리에서의 브라우저 기본 스타일 제거 */
+        padding-left: 20px;
+        /* 아이콘 영역을 위한 여백 */
+        background-image: url('/public/img/locationIcon.svg'), url('/public/img/selector.svg');
+        background-position: 10px center, right 10px center;
+        background-repeat: no-repeat, no-repeat;
+        color: #a9a9a9;
+    }
+    
+    /* select 박스 확장 화살표 제거 (크롬, IE 등 대부분의 브라우저) */
+    .container-search-and-select-box select::-ms-expand {
+        display: none;
+    }
+    
+    .container-club-card {
+        background-color: #E5E5E5;
+        padding-bottom: 80px;
+        padding-left: 35px;
+        padding-right: 35px;
+        display: grid;
+        place-items: center; 
+        row-gap: 10px; 
+        column-gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
+    .clubCard {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 310px;
+        height: 240px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: white;
+    
+    }
+    
+    .clubCard .clubLogo {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 10px 0;
+        /* 가운데 정렬 */
+    }
+    
+    .clubCard h2 {
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: cumin-pro-extra-condensed,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    }
+    
+    .clubCard .clubDetailLink {
+        text-align: center;
+        background-color: white;
+        padding: 5px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: auto;
+        border: 1px solid black; /* 이 부분을 추가합니다 */
+    }
+    
+    .featured-clubs .clubDetailLink {
+        text-align: center;
+        background-color: white;
+        padding: 5px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: auto;
+        border: 1px solid black; /* 이 부분을 추가합니다 */
+    }
+    
+    .tagBox {
+        height: 23px;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    
+    .clubcard-club-name {
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 22px; /* 137.5% */
+    }
+    
+    .clubcard-club-description-category{
+        color: var(--dark, #1A2D58);
+    /* Body */
+    font-family: acumin-pro-extra-condensed,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    }
+    .clubcard-club-description{
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: acumin-pro-extra-condensed,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    opacity: 0.4;
+    }
+}
+@media (min-width: 1400px) {
+    /* 크롬에서 화면 가로 사이즈를 428로 설정하고 폰트 바꾼거 사이즈 바꾼거 확인할 수 있어 */
+    .container-home {
+        padding-top: 80px;
+        overflow: auto;
+    }
+    
+    .container-announcement {
+        height: 110px;
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: #1A2D58;
+        color: aliceblue;
+        display: flex;
+        gap: 40px;
+    }
+    
+    
+    .announcement{
+        text-decoration: none;
+        color: aliceblue;
+        font-family: Figtree;
+    
+    }
+    .announcement-name {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .announcement-description {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .container-headline {
+        height: 280px;
+        padding-top: 108px;
+        padding-bottom: 108px;
+        padding-left: 72px;
+    }
+    
+    .headline-title {
+        width: 100%;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 48px;
+        /* 100% */
+        letter-spacing: 1.44px;
+        font-family:acumin-pro-extra-condensed,sans-serif;
+         color: #1A2D58;
+        
+    }
+    
+    .headline-content {
+        width: 100%;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    
+    .container-search-and-select-box {
+        height: 130px;
+        background-color: #E5E5E5;
+        padding-top: 40px;
+        padding-bottom: 21px;
+        padding-left: 35px;
+        padding-right: 35px;
+        width: 100%;
+    }
+    
+    .search-and-select-box {
+        width: 100%;
+        height: 55px;
+        background-color: white;
+        display: flex;
+        /* flexbox로 설정 */
+        align-items: center;
+        /* 수직 중앙 정렬 */
+        justify-content: start;
+        /* 수평 시작점에서 요소들을 정렬 (선택사항) */
+    
+    }
+    
+    .container-search-and-select-box input[type="text"] {
+        width: 50%;
+        height: 55px;
+        border: none;
+        background-color: white;
+        padding-left: 40px;
+        /* 아이콘 영역을 위한 여백 */
+        background-image: url('/public/img/searchIcon.svg');
+        /* 아이콘 경로를 정확하게 입력해주세요 */
+        background-position: 10px center;
+        /* 아이콘 위치 조정 */
+        background-repeat: no-repeat;
+    }
+    
+    .container-search-and-select-box input[type="text"]::placeholder {
+        width: 50%;
+        color: #a9a9a9;
+        /* placeholder 색상 */
+    }
+    
+    .separator {
+        height: 25px;
+        width: 1px;
+        /* 선의 너비. 필요에 따라 조절 가능 */
+        background-color: #a9a9a9;
+        /* 선의 색상. 원하는 색상으로 변경 */
+        vertical-align: middle;
+        /* 수직 중앙 정렬 */
+    }
+    
+    .container-search-and-select-box select {
+        width: 750px;
+        height: 55px;
+        border: none;
+        border-radius: 0;
+        background-color: white;
+        appearance: none;
+        /* 브라우저 기본 스타일 제거 */
+        -webkit-appearance: none;
+        /* 크롬, 사파리에서의 브라우저 기본 스타일 제거 */
+        padding-left: 40px;
+        /* 아이콘 영역을 위한 여백 */
+        background-image: url('/public/img/locationIcon.svg'), url('/public/img/selector.svg');
+        background-position: 10px center, right 10px center;
+        background-repeat: no-repeat, no-repeat;
+        color: #a9a9a9;
+    }
+    
+    /* select 박스 확장 화살표 제거 (크롬, IE 등 대부분의 브라우저) */
+    .container-search-and-select-box select::-ms-expand {
+        display: none;
+    }
+    
+    .container-club-card {
+        background-color: #E5E5E5;
+        padding-bottom: 80px;
+        padding-left: 35px;
+        padding-right: 35px;
+        display: grid;
+        place-items: center; 
+        row-gap: 10px; 
+        column-gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
+    .clubCard {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 310px;
+        height: 240px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: white;
+    
+    }
+    
+    .clubCard .clubLogo {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 10px 0;
+        /* 가운데 정렬 */
+    }
+    
+    .clubCard h2 {
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: cumin-pro-extra-condensed,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    }
+    
+    .clubCard .clubDetailLink {
+        text-align: center;
+        background-color: white;
+        padding: 5px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: auto;
+        border: 1px solid black; /* 이 부분을 추가합니다 */
+    }
+    
+    .featured-clubs .clubDetailLink {
+        text-align: center;
+        background-color: white;
+        padding: 5px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: auto;
+        border: 1px solid black; /* 이 부분을 추가합니다 */
+    }
+    
+    .tagBox {
+        height: 23px;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    
+    .clubcard-club-name {
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: Figtree;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 22px; /* 137.5% */
+    }
+    
+    .clubcard-club-description-category{
+        color: var(--dark, #1A2D58);
+    /* Body */
+    font-family: acumin-pro-extra-condensed,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    }
+    .clubcard-club-description{
+        color: var(--dark, #1D1D1D);
+    /* Body */
+    font-family: acumin-pro-extra-condensed,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    opacity: 0.4;
+    }
 }

@@ -105,7 +105,7 @@ const Home = () => {
 
   //문자열 길이 줄이는 함수. 최대 길이는 maxLength로 설정한다.
   function truncateString(str) {
-    const maxLength = 100;
+    const maxLength = 150;
   
     // 문자열이 null이거나 "N/A"일 때는 그대로 반환
     if (!str || str === "N/A") {
@@ -123,7 +123,7 @@ const Home = () => {
   
 
   return (
-    <div className="container-home">
+    <div className="container-newhome">
       {announcements.length > 0 && (
       <div className="container-announcement">
         {announcements.map((announcement, index) => (
@@ -137,9 +137,12 @@ const Home = () => {
             </Link>
                 
               </h3>
+              <Link
+              to={`/announcement`} className='announcement'>
               <p className="announcement-description">
                 {truncateString(announcement.announcement_description)}
               </p>
+              </Link>
             </li>
           </div>
         ))}
@@ -154,6 +157,7 @@ const Home = () => {
         Browse our comprehensive list of general clubs with up-to-date information.
         </div>
       </div>
+
       <div className="featured-clubs">
       <div className="featured-clubs-header">
     <h2>Featured Clubs</h2>
@@ -174,6 +178,7 @@ const Home = () => {
     ))}
   </div>
 </div>
+      
 
       <div className="container-search-and-select-box">
         <div className="search-and-select-box">
