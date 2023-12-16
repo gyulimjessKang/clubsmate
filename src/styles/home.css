@@ -193,6 +193,17 @@ line-height: 22px; /* 137.5% */
     border: 1px solid black; /* 이 부분을 추가합니다 */
 }
 
+.featured-clubs .clubDetailLink {
+    text-align: center;
+    background-color: white;
+    padding: 5px 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    border: 1px solid black; /* 이 부분을 추가합니다 */
+}
+
 .tagBox {
     height: 23px;
     margin-bottom: 16px;

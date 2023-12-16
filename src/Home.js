@@ -154,6 +154,26 @@ const Home = () => {
         Browse our comprehensive list of general clubs with up-to-date information.
         </div>
       </div>
+      <div className="featured-clubs">
+      <div className="featured-clubs-header">
+    <h2>Featured Clubs</h2>
+  </div>
+  <div style={{ display: 'flex' }}>
+    {filteredClubData.slice(0, 4).map((club, index) => (
+      <div key={index} style={{ border: '1px solid #ccc', padding: '15px', margin: '10px', width: '200px' }}>
+        <h3>{club.club_name}</h3>
+        <p>Category: {club.category}</p>
+        <p>Meeting Time: {club.meeting_date}</p>
+        <Link
+              to={`/clubDetail/${club.club_name}`}
+              className="clubDetailLink"
+            >
+              Details
+            </Link>
+      </div>
+    ))}
+  </div>
+</div>
 
       <div className="container-search-and-select-box">
         <div className="search-and-select-box">
