@@ -53,33 +53,26 @@ const Announcement = () => {
                 </div>
               ))}
           </div>
-          <div className="additional-info-section">
-            <div className="announcement-holder-button">
-              <a href="mailto:eaglecouncil@sas.edu.sg" className="nav-item">
-                {announcement.manager_name}
-              </a>
-            </div>
-            <div
-              className="announcement-apply-button"
-              onClick={() => handleApplyClick(announcement.apply_link)}
-            >
-              apply
-            </div>
-          </div>
+        
         </div>
         <div className="announcement-headline-section">
           {announcement.announcement_name}
         </div>
         <div className="announcement-sub-info-section">
-          <img src="/img/Icon_date.svg" className="sub-info-icon" alt ="date icon" />
-          <div className="sub-info-datetime-text">
-            {announcement.start_date}
-          </div>
-          <img src="/img/locationIcon.svg" className="sub-info-icon" alt ="location icon"/>
-          <div className="sub-info-location-text">
-            {announcement.location}
-          </div>
-        </div>
+  {announcement.start_date || announcement.location ? (
+    <>
+      <img src="/img/Icon_date.svg" className="sub-info-icon" alt="date icon" />
+      <div className="sub-info-datetime-text">
+        {announcement.start_date}
+      </div>
+      <img src="/img/locationIcon.svg" className="sub-info-icon" alt="location icon" />
+      <div className="sub-info-location-text">
+        {announcement.location}
+      </div>
+    </>
+  ) : null}
+</div>
+
         <div className="announcement-description-text-section">
           {announcement.announcement_description}
         </div>
