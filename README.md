@@ -17,9 +17,6 @@
 Aug. 7th. 2023
 
 
-### 👇 Check my Clubsmate development journey on Youtube 👇
-[links](http://youtube.com)
-
 # Service Design
 ## :pencil2: Problem Statement
 Problems Faced by Students, Club Initiators, and Teachers:
@@ -37,9 +34,6 @@ i. Manual Administrative Processes: Teachers responsible for overseeing clubs wi
 
 ## Firebase structure
 ![Clubsmate structure](https://github.com/gyulimjessKang/clubsmate/blob/master/Clubsmate_Firebase.svg)
-
-## Firestore
-[clubsmate nosql database model](https://docs.google.com/spreadsheets/d/12Qvgs-iuxbtcDP39zFRjNjxpulE5hEewPz8BP25pal8/edit?usp=share_link)
 
 
 
