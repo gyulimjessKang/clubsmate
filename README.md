@@ -16,8 +16,8 @@
 ### Launched Date
 Aug. 7th. 2023
 
-### 👇 Check my Clubsmate development journey on Youtube 👇
-[links](https://drive.google.com/file/d/10_opAWSE-Cys9MqHOVxn4VR4sXWAopFB/view?usp=drive_link)
+### 👇 Check my Clubsmate development journey👇
+[VIDEO](https://drive.google.com/file/d/10_opAWSE-Cys9MqHOVxn4VR4sXWAopFB/view?usp=drive_link)
 
 # Service Design
 ## :pencil2: Problem Statement
