@@ -9,7 +9,7 @@ const Announcement = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Announcements 컬렉션에서 모든 문서 가져오기
+    // Get all documents from the Announcements collection
     const fetchAnnouncements = async () => {
       const firestore = firebase.firestore();
       const announcementsCollection = firestore.collection("Announcements");

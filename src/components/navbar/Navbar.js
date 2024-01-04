@@ -17,7 +17,7 @@ function Navbar() {
       });
   };
 
-  // 로그인 한 사용자에게만 Navbar를 보여줍니다.
+  // Show Navbar only to logged in users.
   if (currentUser) {
     return (
       <nav className="fixed-top pt-0">
@@ -108,7 +108,6 @@ function Navbar() {
       </nav>
     );
   } else {
-    // 로그인하지 않은 사용자에게는 아무것도 보여주지 않습니다.
     return null;
   }
 }

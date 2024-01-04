@@ -19,8 +19,6 @@
 .event-left-info-section {
     width: 140px;
     flex-shrink: 0;
-    /* 크기가 줄어들지 않도록 설정 */
-    /* flex: none; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -96,9 +94,7 @@
 
 .event-right-description-section {
     flex: 1;
-    /* width: 1130px; */
     min-width: 300px;
-    /* 최소 너비 설정 */
     margin-left: 36px;
     padding: 28px 20px 28px 20px;
     background-color: white;
@@ -114,9 +110,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* 좌우로 요소를 고르게 정렬 */
     align-items: center;
-    /* 세로 방향에서 가운데 정렬 */
 }
 
 .hashtag-box-section {
@@ -143,12 +137,9 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    /* 가장 오른쪽으로 정렬 */
     flex-grow: 1;
-    /* 빈 공간을 차지하도록 설정 */
     align-items: center;
-    /* 세로 방향에서 가운데 정렬 */
-
+    
 }
 
 .event-holder-button {
@@ -331,7 +322,6 @@
 
     .event-right-description-section {
         width: 100%;
-        /* 전체 너비로 설정 */
         max-width: 700px;
         margin-left: 0px;
     }
@@ -339,7 +329,6 @@
 
 @media only screen and (max-width: 428px) {
     .event-box-section {
-        /* width: 1300px; */
         width: 100%;
         max-width: 380px;
         display: flex;
@@ -358,13 +347,10 @@
 
     .event-logo-section {
         width: 140px;
-        /* margin-bottom: 20px; */
     }
 
     .club-logo {
         width: 140px;
-        /* max-width: 100%; */
-        /* height: auto; */
     }
 
     .event-ask-section {
@@ -435,7 +421,6 @@
     }
 
     .event-right-first-header-section {
-        /* height: 23px; */
         margin-bottom: 30px;
         display: flex;
         flex-direction: column;
@@ -493,7 +478,6 @@
         padding: 2px 10px;
         justify-content: center;
         align-items: center;
-        /* gap: 6px; */
         border-radius: 4px;
         border: 0.6px solid var(--navy, #1A2D58);
     

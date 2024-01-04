@@ -5,7 +5,7 @@ import "./eventdetail.css";
 import { useParams } from "react-router-dom";
 
 const EventDetail = () => {
-  // clubName을 props로 받음
+  
   const { club_name, event_name } = useParams();
   const [clubData, setClubData] = useState(null);
   const [clubEvents, setClubEvents] = useState([]);
@@ -46,10 +46,10 @@ const EventDetail = () => {
           .get();
 
         if (eventDoc.exists) {
-          // 해당 이벤트 문서가 있으면 해당 이벤트 정보를 가져와서 setClubEvents로 상태 업데이트
+          // If there is a corresponding event document, retrieve the event information and update the status with setClubEvents
           setClubEvents([eventDoc.data()]);
         } else {
-          // 해당 이벤트 문서가 없으면 처리 (예: 에러 메시지 표시 등)
+
           setClubEvents([]);
         }
       } catch (error) {
@@ -96,7 +96,6 @@ const EventDetail = () => {
       <div className="event-box-section">
         <div className="event-left-info-section">
           <div className="event-logo-section">
-            {/* club logo */}
             <img
               src={
                 clubData.club_logo === "N/A"

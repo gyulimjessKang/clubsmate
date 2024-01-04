@@ -67,28 +67,3 @@
     display: flex;
     justify-content: center;
 }
-
-
-
-
-
-/* 
-위의 코드를 다 복사해서 아래에 각 화면사이즈 별로 적절하게 폰트사이즈와 간격
-박스 넓이를 조정하면 돼! */
-
-
-
-@media (max-width: 428px) {
-    /* 크롬에서 화면 가로 사이즈를 428로 설정하고 폰트 바꾼거 사이즈 바꾼거 확인할 수 있어 */
-
-}
-
-@media (max-width: 768px) {
-
-}
-@media (max-width: 1400px) {
-
-}
-@media (max-width: 1920px) {
-
-}

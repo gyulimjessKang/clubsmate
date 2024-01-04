@@ -12,8 +12,8 @@ const Chat = () => {
   const [user, setUser] = useState(null);
   const [messages, setMessages] = useState([]);
   const [userMessageCount, setUserMessageCount] = useState(0);
-  const [userMessagesJSON, setUserMessagesJSON] = useState({}); // JSON 형태로 사용자 메시지를 저장할 상태
-  const [refreshChat, setRefreshChat] = useState(false); // 채팅창 새로고침 상태 추가
+  const [userMessagesJSON, setUserMessagesJSON] = useState({}); // store user messages in JSON format
+  const [refreshChat, setRefreshChat] = useState(false); // chat window refresh status
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Chat = () => {
     }
   };
 
-  useEffect(scrollToBottom, [messages]); // 메시지가 변경될 때마다 스크롤이 최하단으로 이동하도록 설정
+  useEffect(scrollToBottom, [messages]); // Set scroll to move to the bottom whenever the message changes
 
   const toggleChat = () => {
     setShowChat(!showChat);
@@ -58,7 +58,6 @@ const Chat = () => {
   };
 
   useEffect(() => {
-    // 새로고침이 필요한 경우, message state와 채팅 메시지를 초기화
     if (refreshChat) {
       setMessage("");
       setUserMessageCount(0);
@@ -93,11 +92,11 @@ const Chat = () => {
       setUserMessagesJSON({
         ...userMessagesJSON,
         [(userMessageCount + 1).toString()]: message,
-      }); // 사용자 메시지 JSON 업데이트
+      }); // User message JSON update
       setUserMessageCount(userMessageCount + 1);
 
       if (userMessageCount === 3) {
-        // 채팅이 끝나면 userMessagesJSON 전송
+        // Send userMessagesJSON when chat ends
         console.log("4th message : ", message);
         setUserMessagesJSON({ ...userMessagesJSON, ["4"]: message });
       }
@@ -105,7 +104,6 @@ const Chat = () => {
     setMessage("");
   };
 
-  // useEffect를 사용하여 userMessagesJSON이 업데이트될 때마다 fetch 실행
   useEffect(() => {
     if (userMessageCount === 4) {
       const fetchMessages = async () => {

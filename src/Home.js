@@ -16,7 +16,7 @@ const Home = () => {
   
 
   useEffect(() => {
-    // Firestore 데이터 가져오기
+    
     const firestore = firebase.firestore();
     const clubInfoRef = firestore.collection('ClubInfo');
     const categoryRef = firestore.collection('categoryManage');
@@ -25,7 +25,7 @@ const Home = () => {
       .then((querySnapshot) => {
         const data = querySnapshot.docs.map((doc) => doc.data());
         setClubDataList(data);
-        setFilteredClubData(data); // 최초에 모든 동아리 데이터를 보여줍니다.
+        setFilteredClubData(data);
       })
       .catch((error) => {
         console.log('Error getting documents:', error);
@@ -33,7 +33,6 @@ const Home = () => {
 
     categoryRef.doc("category").get().then((categorydoc) => {
       if (categorydoc.exists) {
-        // 문서가 존재할 경우 문서 데이터를 가져와서 categories 상태 업데이트
         setCategories(Object.keys(categorydoc.data()));
       } else {
         console.log("Can't find the document.");
@@ -45,8 +44,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    // 검색어가 변경될 때마다 동아리 데이터를 필터링하여 업데이트합니다.
-    // 검색어 또는 선택된 카테고리가 변경될 때마다 동아리 데이터를 필터링하여 업데이트합니다.
+    // Club data is filtered and updated whenever the search term or selected category changes.
     setFilteredClubData([]);
     const lowerSearchTerm = searchTerm.toLowerCase();
     const lowerSelectedCategory = selectedCategory.toLowerCase();
@@ -57,14 +55,10 @@ const Home = () => {
       const lowerCategory = club.category ? club.category.toLowerCase() : '';
       const lowerMeetingTime = club.meeting_date ? club.meeting_date.toLowerCase() : '';
 
-      // 검색어와 선택된 카테고리가 모두 없는 경우는 모든 동아리를 보여줍니다.
+      // If both the search term and the selected category are unset, all clubs are displayed.
       if (!lowerSearchTerm && !lowerSelectedCategory) {
         return true;
       }
-
-      // 검색어가 club.name 또는 club.category에 포함된 경우에만 필터링합니다.
-      // 검색어와 선택된 카테고리 중 하나에 포함된 경우에만 필터링합니다.
-
 
       return (
         (lowerSearchTerm && (lowerClubName.includes(lowerSearchTerm) || lowerCategory.includes(lowerSearchTerm) || lowerMeetingTime.includes(lowerSearchTerm))) ||
@@ -79,17 +73,17 @@ const Home = () => {
   const handleSearchTermChange = (event) => {
     setSelectedCategory('');
     setSearchTerm(event.target.value);
-    // searchTerm이 변경되면 selectedCategory 초기화
+    // Initialize selectedCategory when searchTerm changes
   };
 
   const handleCategoryChange = (event) => {
     setSearchTerm('');
     setSelectedCategory(event.target.value);
-    // selectedCategory가 변경되면 searchTerm 초기화
+    // Initialize searchTerm when selectedCategory changes
   };
 
   useEffect(() => {
-    // Firestore의 Announcement 콜렉션에서 데이터 가져오기
+    // fetch data from the 'Announcement' collection
     const firestore = firebase.firestore();
     const announcementRef = firestore.collection('Announcements');
 
@@ -103,21 +97,21 @@ const Home = () => {
       });
   }, []);
 
-  //문자열 길이 줄이는 함수. 최대 길이는 maxLength로 설정한다.
+  //The maximum length is set to maxLength.
   function truncateString(str) {
     const maxLength = 150;
   
-    // 문자열이 null이거나 "N/A"일 때는 그대로 반환
+    // If the string is null or "N/A", it is returned as is.
     if (!str || str === "N/A") {
       return str;
     }
   
-    // 문자열의 길이가 maxLength보다 크면 잘라서 반환
+    // If the length of the string is greater than maxLength, it is truncated and returned.
     if (str.length > maxLength) {
       return str.substring(0, maxLength) + '...';
     }
   
-    // 위의 조건들에 해당하지 않는 경우 원본 문자열 반환
+    // If the above conditions are not met, the original string is returned.
     return str;
   }
   
@@ -199,7 +193,7 @@ const Home = () => {
             <option value="" disabled hidden>
               Select Category
             </option>{" "}
-            {/* 기본 텍스트 옵션 */}
+            
             {categories.map((category, index) => (
               <option key={index} value={category}>
                 {category}
@@ -213,23 +207,17 @@ const Home = () => {
         {filteredClubData.map((club, index) => (
           <div className="clubCard" key={index}>
             <div className="tagBox">
-        {/* club.hash_tag 값이 "N/A"가 아니라면 처리 */}
+        
         {club.hash_tag !== "N/A" && club.hash_tag.split(',').slice(0, 3).map((tag, tagIndex) => (
           <div key={tagIndex} className="hashtag-box">
             {tag.trim()}
           </div>
         ))}
       </div>
-            {/* {((club.club_logo)!="N/A") && (
-              <img
-                src={club.club_logo}
-                alt={`${club.club_name} logo`}
-                className="clubLogo"
-              />
-            )} */}
+            
             <div className="clubcard-club-name">{club.club_name}</div>
-            <p className="clubcard-club-description-category">{club.category}</p> {/* 클럽 카테고리 */}
-            <p className="clubcard-club-description">{club.meeting_date}</p> {/* 클럽 스케쥴 */}
+            <p className="clubcard-club-description-category">{club.category}</p> 
+            <p className="clubcard-club-description">{club.meeting_date}</p> 
             
             <Link
               to={`/clubDetail/${club.club_name}`}

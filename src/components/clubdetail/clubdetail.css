@@ -14,8 +14,6 @@
 
 .left-section {
     width: 140px;
-    /* margin-top: 50px; */
-    /* margin-left: 36px; */
     justify-content: space-between;
     margin-right: 36px;
 }
@@ -88,7 +86,6 @@
 }
 
 .right-section {
-    /* width: 1130px; */
     flex: 1;
     min-width: 300px;
     display: flex;
@@ -334,7 +331,6 @@
     }
 
     .left-section {
-        /* width: 100vw; */
         width: 744px;
         display: flex;
         flex-direction: row;
@@ -540,7 +536,6 @@
     .linksBox {
         display: flex;
         flex-direction: row;
-        /* margin-right: 18px; */
     }
 
     .joinButton {

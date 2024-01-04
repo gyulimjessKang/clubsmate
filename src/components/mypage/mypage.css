@@ -364,7 +364,6 @@
     }
     
     .right-info-section {
-        /* min-width: 300px; */
         width: 600px;
         margin-left: 20px;
         display: flex;

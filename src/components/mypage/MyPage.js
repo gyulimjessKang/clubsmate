@@ -30,7 +30,7 @@ const MyPage = () => {
     console.log(`Selected Club: ${selectedClub}`);
     console.log(`Selected Auth: ${selectedAuth}`);
 
-    // 선택된 클럽 이름과 권한이 빈 문자열이 아닌 경우에만 handleCreateRequest를 호출
+    // Call handleCreateRequest only if the selected club name and permissions are not empty strings
     if (selectedClub && selectedAuth) {
       handleCreateRequest();
     } else {
@@ -40,17 +40,17 @@ const MyPage = () => {
 
   const handleCreateRequest = async () => {
     try {
-      const clubName = selectedClub; // 선택한 클럽 이름
+      const clubName = selectedClub;
       const requestData = {
         confirm_flag: false,
         confirmed_timestamp: null,
         current_role: "0",
-        request_club_leader: selectedAuth, // 선택한 권한
+        request_club_leader: selectedAuth,
         request_role: "1",
         request_timestamp: new Date().toString(),
       };
 
-      // RequestAuthority 컬렉션 안의 해당 사용자의 문서에 RequestInfo 컬렉션을 추가
+    
       const userRequestDocRef = firebase
         .firestore()
         .collection("RequestAuthority")
@@ -59,13 +59,13 @@ const MyPage = () => {
         .collection("RequestInfo")
         .doc(clubName);
 
-      // 먼저 문서를 읽어옴
+      
       const userRequestDoc = await userRequestDocRef.get();
       const requestInfoDoc = await requestInfoDocRef.get();
 
-      // 트랜잭션을 실행
+     
       await firebase.firestore().runTransaction(async (transaction) => {
-        // 읽기가 모두 완료되면 트랜잭션 내에서 쓰기를 수행
+        
         if (!userRequestDoc.exists) {
           transaction.set(userRequestDocRef, {});
         }
@@ -74,10 +74,10 @@ const MyPage = () => {
         }
       });
 
-      // 성공적으로 저장되었을 경우
+      
       alert("Requested.");
     } catch (error) {
-      // 오류가 발생한 경우
+      
       console.error("Error writing to Firestore:", error);
       alert(" Try again.");
     }
@@ -143,7 +143,7 @@ const MyPage = () => {
 
           clubEventsSnapshot.forEach((eventDoc) => {
             let eventData = eventDoc.data();
-            eventData.id = eventDoc.id; // 문서 ID를 저장하면 나중에 유용할 수 있습니다.
+            eventData.id = eventDoc.id; 
             allEvents.push(eventData);
           });
         } catch (error) {
@@ -171,7 +171,6 @@ const MyPage = () => {
       <div className="left-info-section">
         <div className="profileBox">
           <img src={currentUser.photoURL} alt="Profile" />{" "}
-          {/* 프로필 사진 표시 */}
         </div>
         <div className="quicklinks">
           <div className="quickButton">

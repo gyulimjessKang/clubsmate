@@ -349,7 +349,7 @@ const Admin = () => {
   }, [selectedEvent, selectedClub, db]);
 
   useEffect(() => {
-    // 'Announcements' 컬렉션에 바로 존재하는 문서들 가져오기
+    // Fetch all docs in the collection, 'Announcements'
     const fetchAnnouncements = async () => {
       try {
         const querySnapshot = await firebase
@@ -371,7 +371,7 @@ const Admin = () => {
   }, []);
 
   useEffect(() => {
-    // RequestAuthority 컬렉션의 모든 문서들을 가져옵니다.
+    // Fetch all docs in the collection , RequestAuthority
     const getRequests = async () => {
       try {
         const querySnapshot = await firebase
@@ -381,16 +381,16 @@ const Admin = () => {
         const requestList = [];
 
         querySnapshot.forEach((doc) => {
-          // 각 문서에서 confirm_flag가 false인 RequestInfo 컬렉션의 문서들을 가져옴
+          // Retrieves documents from the RequestInfo collection where confirm_flag is false in each document.
           const requestInfoRef = doc.ref
             .collection("RequestInfo")
             .where("confirm_flag", "==", false);
           requestInfoRef.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-              // 가져온 문서들을 requestList에 추가합니다.
+              // add fetched docs to requestList.
               requestList.push({
-                emailHandle: doc.ref.parent.parent.id, // userEmail을 AuthorityRequest 컬렉션의 문서 ID로 사용
-                clubName: doc.id, // clubName을 RequestInfo 컬렉션의 문서 ID로 사용
+                emailHandle: doc.ref.parent.parent.id, //Use userEmail as document ID in AuthorityRequest collection
+                clubName: doc.id, // Use clubName as document ID in RequestInfo collection
                 confirmFlag: doc.data().confirm_flag,
                 confirmedTimestamp: doc.data().confirmed_timestamp,
                 currentRole: doc.data().current_role,
@@ -541,9 +541,12 @@ const Admin = () => {
     }));
   };
 
+  /*
+  1. Find the document with emailHandle as the document ID in the 'Users' collection.
+  2. Update the user_role in the subcollection (JoinClub) of the user (found the user doc at 1.)
+  */
   const handleApproveRequest = async (request) => {
     try {
-      // Users 컬렉션에서 Email Handle을 문서 ID로 하는 문서를 찾아서 JoinClub 컬렉션 안에서 Club Name을 문서 ID로 하는 문서를 업데이트시킴
       await firebase
         .firestore()
         .collection("Users")
@@ -551,11 +554,11 @@ const Admin = () => {
         .collection("JoinClub")
         .doc(request.clubName)
         .update({
-          user_role: request.requestRole, // Request User Role 값으로 업데이트
-          club_leader: request.requestClubLeader, // Request Club Leader 값으로 업데이트
+          user_role: request.requestRole, 
+          club_leader: request.requestClubLeader, 
         });
 
-      // RequestInfo 컬렉션의 해당 문서를 업데이트
+     
       await firebase
         .firestore()
         .collection("RequestAuthority")
@@ -563,9 +566,9 @@ const Admin = () => {
         .collection("RequestInfo")
         .doc(request.clubName)
         .update({
-          confirm_flag: true, // confirm_flag를 true로 업데이트
-          confirmed_timestamp: new Date().toString(), // 현재 시간을 문자열로 변환하여 confirmed_timestamp로 업데이트
-          current_role: request.requestRole, // Request User Role 값으로 업데이트
+          confirm_flag: true, // Update confirm_flag to true
+          confirmed_timestamp: new Date().toString(), // Convert current time to string and update with confirmed_timestamp
+          current_role: request.requestRole, 
         });
       setIsRequestApproved(true);
       setApprovedRequests((prev) => [...prev, request.emailHandle]);
@@ -615,17 +618,17 @@ const Admin = () => {
   }, []);
 
   const handleRefreshTable = () => {
-    // 새로고침 버튼 클릭 시, 테이블 데이터를 다시 불러와서 테이블 정보를 갱신
+    // When the refresh button is clicked, the table data is reloaded and the table information is updated.
     fetchRequests();
   };
 
  
 
-  // 인풋 박스의 스타일 동적으로 설정
+  // Dynamically set the style of an input box
   const setInputWidth = () => {
     const input = document.getElementById("my-input");
     if (input) {
-      input.style.width = "100%"; // 화면 전체 가로 길이로 늘리기
+      input.style.width = "100%"; 
     }
   };
 
@@ -658,10 +661,10 @@ const Admin = () => {
             console.log("download URL is : ",url);
             console.log("selected CLUB", selectedClub);
 
-            // Firestore에 URL을 저장
+            // Save URL to Firestore
           saveImageLinkToFirestore(selectedClub, url);
 
-          // Upload가 완료되면 alert를 띄웁니다.
+          // When upload is completed, an alert is displayed.
           alert("Upload is complete");
 
           });
@@ -685,13 +688,6 @@ const Admin = () => {
 
   const [showDatePicker, setShowDatePicker] = useState(false);
 
-  const handleDateChange = (date) => {
-      setClubInfo(prevState => ({
-          ...prevState,
-          meeting_time: date
-      }));
-      setShowDatePicker(false);  // 날짜 선택 후 DatePicker 숨기기
-  };
 
 
   return (

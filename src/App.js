@@ -13,7 +13,6 @@ import Admin from './Admin'
 import MyPage from './components/mypage/MyPage';
 import Announcement from './components/announcement/Announcement';
 import Footer from './components/footer/Footer';
-import Cal from './Cal';
 import Feedback from './Feedback';
 
 function App() {
@@ -22,8 +21,6 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-            {/* <PrivateRoute path="/clubdetail" element={<ClubDetail />} /> 보호된 경로로 로그인 정보가 없으면 보이지 않는 페이지를 PrivateRoute로 설정*/}
-       
           <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
           <Route path="/login" element={<Login />} />
@@ -31,7 +28,6 @@ function App() {
           <Route path="/eventdetail/:club_name/:event_name" element={<PrivateRoute><EventDetail /></PrivateRoute>} />
           <Route path="/mypage" element={<PrivateRoute><MyPage /></PrivateRoute>} />
           <Route path="/announcement" element={<PrivateRoute><Announcement /></PrivateRoute>} />
-          <Route path="/cal" element={<PrivateRoute><Cal /></PrivateRoute>} />
           <Route path="/feedback" element={<PrivateRoute><Feedback /></PrivateRoute>} />
 
           <Route path="/footer" element={<Footer />} />

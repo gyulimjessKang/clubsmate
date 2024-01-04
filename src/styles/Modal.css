@@ -1,4 +1,4 @@
-/* 모달이 화면 전체를 덮는 오버레이 스타일 */
+/* Modal.css */
 .modal-overlay {
     position: fixed;
     width: 50vw;
@@ -8,42 +8,35 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
-    /* 반투명한 검은색 배경 */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* 화면의 맨 앞에 위치하도록 z-index 설정 */
 }
 
-/* 모달 창 스타일 */
 .modal {
     width: 80%;
     max-width: 500px;
-    /* 최대 가로 크기 */
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    /* 그림자 효과 */
     z-index: 1001;
-    /* 오버레이보다 앞에 위치하도록 설정 */
+    /* Set to be positioned before the overlay */
 }
 
-/* 모달 헤더 스타일 */
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* 모달 제목 스타일 */
 .modal-header h2 {
     margin: 0;
     font-size: 1.5em;
 }
 
-/* 모달 닫기 버튼 스타일 */
+/* close button style of the modal*/
 .close-button {
     background: none;
     border: none;
@@ -51,7 +44,6 @@
     cursor: pointer;
 }
 
-/* 모달 내용 스타일 */
 .modal-content {
     margin-top: 20px;
 }

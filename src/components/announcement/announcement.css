@@ -1,3 +1,4 @@
+/* announcement.css */
 .container-announcement-detail {
     margin-top: 80px;
     height: 100vh;
@@ -46,12 +47,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    /* 가장 오른쪽으로 정렬 */
     flex-grow: 1;
-    /* 빈 공간을 차지하도록 설정 */
     align-items: center;
-    /* 세로 방향에서 가운데 정렬 */
-
 }
 
 .announcement-holder-button {

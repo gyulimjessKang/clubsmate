@@ -2,10 +2,10 @@ import React from "react";
 import "./styles/Modal.css";
 
 const Modal = ({ isOpen, onRequestClose, title, children }) => {
-  // isOpen: 모달이 열려있는지 여부를 나타내는 prop
-  // onRequestClose: 모달을 닫기 위한 콜백 함수를 전달하는 prop
-  // title: 모달의 제목을 나타내는 prop
-  // children: 모달 내부에 표시될 컨텐츠를 나타내는 prop
+  // isOpen: A prop indicating whether the modal is open.
+  // onRequestClose: A prop that passes a callback function to close the modal.
+  // title: A prop representing the title of the modal
+  // children: Prop representing the content to be displayed inside the modal
 
   if (!isOpen) {
     return null;

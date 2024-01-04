@@ -29,7 +29,7 @@ const ClubDetail = () => {
         console.error("Error writing document: ", error);
         alert("Failed.");
       }
-      //추후에, member수 증가시키는 부분 추가해야함.
+
     }
   };
 

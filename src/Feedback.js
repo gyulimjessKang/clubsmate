@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
-import 'firebase/auth'; // 인증 모듈 추가
+import 'firebase/auth';
 import 'firebase/firestore';
 import './styles/feedback.css';
 
 const Feedback = () => {
 const [feedback, setFeedback] = useState({
-username: '', // 로그인한 사용자의 이름
+username: '', 
 content: '',
 });
 
-// 현재 날짜와 시간을 저장하는 상태
+//stores the current date and time
 const [currentDateTime, setCurrentDateTime] = useState('');
 
 useEffect(() => {
-// 사용자가 로그인한 경우, 이름을 가져옵니다.
+// If the user is logged in, get their name.
 firebase.auth().onAuthStateChanged(user => {
 if (user) {
 setFeedback({ ...feedback, username: user.displayName });
 }
 });
 
-// 현재 날짜와 시간 설정
+// set current date and time
 const now = new Date();
-setCurrentDateTime(now.toLocaleString()); // 예: '2023/11/11, 12:00:00 PM'
+setCurrentDateTime(now.toLocaleString()); // ex: '2023/11/11, 12:00:00 PM'
 }, []);
 
 const handleChange = (e) => {
@@ -34,19 +34,18 @@ setFeedback({ ...feedback, [e.target.name]: e.target.value });
 const handleSubmit = async (e) => {
 e.preventDefault();
 try {
-// Firebase Firestore에 데이터를 추가합니다.
+// add comment data to the Firebase Firestore
 await firebase.firestore().collection('Comments').add({
 username: feedback.username,
 date: currentDateTime,
 content: feedback.content,
 });
-// 데이터 저장 성공 알림
+
+
 if (window.confirm('Success')) {
-// 사용자가 확인을 누르면 화면 새로고침
 window.location.reload();
 }
 } catch (error) {
-// 오류 발생 시 콘솔에 출력
 console.error("Error adding document: ", error);
 }
 };
