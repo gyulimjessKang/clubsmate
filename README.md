@@ -46,14 +46,14 @@ i. Manual Administrative Processes: Club leaders responsible for overseeing club
 * react 18
 
 
-Clone the project on your computer and see how it works
+Clone the project on your computer and see how it works:
 
 ```
   git clone  https://github.com/jessxkang/clubsmate
   cd clubsmate
 ```
 
-After that, to run project, run this commands:
+After that, to run project, run these commands:
 
 
 ##### npm
