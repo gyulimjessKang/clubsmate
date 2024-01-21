@@ -17,7 +17,7 @@
 Aug. 7th. 2023
 
 ### 👇 Check my Clubsmate development journey👇
-[VIDEO]([url](https://drive.google.com/file/d/1zop4ss7nED8pKm4sXgsjT4Rf4FZQtNJK/view?usp=sharing))
+[VIDEO](https://drive.google.com/file/d/1zop4ss7nED8pKm4sXgsjT4Rf4FZQtNJK/view?usp=sharing)
 
 # Service Design
 ## :pencil2: Problem Statement
