@@ -11,7 +11,7 @@
 
 
 ### Development duration
-07/05/23 ~ 08/05/23
+05/20/23 ~ 08/05/23
 
 ### Launched Date
 Aug. 7th. 2023
